@@ -5,7 +5,9 @@ togheter in a simple SPA + REST API application.
 # USAGE
 ## Getting started
 To set up the application on your local machine, open your terminal, navigate to the directory containing compose.yml file and run the following command:
+```
 docker compose up
+```
 After a few minutes, the application should be fully started, and you can check it out at `http://localhost:4200`. However, if you do this, you'll notice that
 nothing actually appears. Indeed, console throws an error. That's because SPA and keycloak aren't integrated yet.
 
@@ -23,16 +25,16 @@ valid post logout redirect URIs: http://localhost:4200/*
 web origins: http://localhost:4200
 ```
 This essentially insures that only our application can request a token, and that user will, post login/logout, be redirected back to our app. Note that it is important
-to be as specific as possible here, to protect against another application stealing our authentication token.
+to be as specific as possible here, to protect against another application stealing our authentication token.  
 We'll make our app a little bit more secure, by enabling PKCS flow, which guarantees that another app can't get an auth token even if it intercepts the response from
-keycloak server. So, navigate to `client` section, `advanced` tab, locate `Proof Key for Code Exchange Challenge Method` and select `S256`.
+keycloak server. So, navigate to `client` section, `advanced` tab, locate `Proof Key for Code Exchange Challenge Method` and select `S256`.  
 After this setup we can navigate back to SPA without a problem, however we can't yet log in because we haven't created our account.
 
 ### User registration
 We can register new user in two ways, through keycloak admin console or SPA.
-First way, is to navigate to users section in samplerealm and then create user with your desired info,
+First way, is to navigate to `users` section in samplerealm and then create user with your desired info,
 and assign him the password in credentials tab.
-Second way is to enable user registration. To do this, navigate to realm settings section, and under login tab there is
+Second way is to enable user registration. To do this, navigate to `realm settings` section, and under login tab there is
 a user registration toggle. Enable it. Now when you click login button in SPA, you'll find an option for registration as well.
 
 ## Populating the database
