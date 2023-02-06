@@ -51,5 +51,5 @@ body:
   "price": {{price}}
 }
 ```
-Now click on the three dots next to the collection, and select `Run Collection` from the drop down menu. Select `items-data` file
+Now click on the three dots next to the collection, and select `Run Collection` from the drop down menu. Select `items-data.json` file
 and run the collection.
