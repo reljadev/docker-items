@@ -1,6 +1,6 @@
 # INTRODUCTION
 This repo demonstrates basic usages of Angular framework, .Net 6 framework and Keycloak authentication & authorization technologies and how they are integrated
-togheter in a simple SPA + REST API application.
+togheter in a simple SPA + REST API application. Full source code for frontend app is available at [reljadev/ng-items](https://github.com/reljadev/ng-items), and backend can be found at [reljadev/dotnet-items](https://github.com/reljadev/dotnet-items).
 
 # USAGE
 ## Getting started
