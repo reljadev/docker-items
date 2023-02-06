@@ -1,0 +1,100 @@
+[
+    {
+        "name": "Apple AirPods Pro",
+        "description": "Active noise cancellation for immersive sound.",
+        "price": 249.00
+    },
+    {
+        "name": "Sony WH-1000XM4 Wireless Headphones",
+        "description": "Industry-leading noise canceling headphones.",
+        "price": 349.99
+    },
+    {
+        "name": "Bose SoundLink Micro Bluetooth speaker",
+        "description": "Waterproof speaker with big sound.",
+        "price": 99.00
+    },
+    {
+        "name": "Amazon Kindle Paperwhite",
+        "description": "Featuring a 6-inch, 300 ppi display.",
+        "price": 129.99
+    },
+    {
+        "name": "Samsung Galaxy Watch 3",
+        "description": "Advanced fitness tracking and long battery life.",
+        "price": 399.99
+    },
+    {
+        "name": "Fitness Tracker",
+        "description": "Tracks steps, distance, and calories burned.",
+        "price": 49.99
+    },
+    {
+        "name": "Sony PlayStation 5 Digital Edition",
+        "description": "Experience lightning-fast loading.",
+        "price": 399.99
+    },
+    {
+        "name": "Apple iPad",
+        "description": "Powerful and portable tablet.",
+        "price": 329.00
+    },
+    {
+        "name": "Canon EOS Rebel T7 DSLR Camera",
+        "description": "24.1 Megapixel CMOS sensor and DIGIC 4+ Image Processor.",
+        "price": 399.00
+    },
+    {
+        "name": "Instant Pot DUO60",
+        "description": "7-in-1 pressure cooker.",
+        "price": 99.00
+    },
+    {
+        "name": "Nest Learning Thermostat",
+        "description": "Programmable smart thermostat.",
+        "price": 249.00
+    },
+    {
+        "name": "Ring Video Doorbell",
+        "description": "See, hear and speak to anyone at your door.",
+        "price": 99.99
+    },
+    {
+        "name": "Phillips Hue A19 Smart LED Bulb",
+        "description": "Adjustable white and color ambiance.",
+        "price": 49.99
+    },
+    {
+        "name": "Anker PowerCore 10000 Portable Charger",
+        "description": "Powerful and compact portable charger.",
+        "price": 25.99
+    },
+    {
+        "name": "Echo Dot (3rd Gen)",
+        "description": "Smart speaker with Alexa.",
+        "price": 39.99
+    },
+    {
+        "name": "Tile Mate (2020)",
+        "description": "Find your lost items.",
+        "price": 29.99
+    },
+    {
+        "name": "Roomba 675 Robot Vacuum",
+        "description": "Clean your floors with just the push of a button.",
+        "price": 279.00
+    },
+    {
+        "name": "GoPro HERO9 Black",
+        "description": "Capture stunning 5K video and 20MP photos with the HERO9 Black.",
+	"price": 399.99
+    },
+    {
+	"name": "Nike Air Zoom Pegasus 37",
+	"description": "Responsive cushioning and a secure fit.",
+	"price": 129.99
+    }
+]
+
+
+
