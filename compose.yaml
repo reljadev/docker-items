@@ -1,0 +1,81 @@
+services:
+  frontendservice:
+    image: palubica/itemsspaclient
+    container_name: frontendservice
+    ports:
+      - 4200:4200
+
+  inventoryservice:
+    image: palubica/itemsinventoryservice
+    container_name: inventoryservice
+    ports:
+      - 7130:7130
+      - 5132:5132
+    depends_on:
+      # NOTE: there should be a health check for mongo & auth as well,
+      # but rabbitmq takes the longest to get started, so it's ok without them for now
+      # mongo:
+        # condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+      # auth:
+        # condition: service_healthy
+
+  catalogservice:
+    image: palubica/itemscatalogservice
+    container_name: catalogservice
+    ports:
+      - 7229:7229
+      - 5214:5214
+    depends_on:
+      # mongo:
+        # condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+      # auth:
+        # condition: service_healthy
+
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodbdata:/data/db
+
+  rabbitmq:
+    image: palubica/rabbitmqwcurl
+    container_name: rabbitmq
+    ports:
+      - 15672:15672
+    # NOTE: expose is informational only, it doesn't actually do anything
+    expose:
+      - "5672"
+    volumes:
+      - rabbitmqdata:/var/lib/rabbitmq
+    hostname: rabbitmq
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:15672"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  auth:
+    # NOTE: in production, keycloak has healtchecks built in
+    image: quay.io/keycloak/keycloak:20.0.3
+    container_name: auth
+    ports:
+      - 8080:8080
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+      - KC_HOSTNAME=localhost
+    command: start-dev
+    volumes:
+      - authdata:/opt/keycloak/data
+    hostname: authserver
+
+volumes:
+  mongodbdata:
+  rabbitmqdata:
+  authdata:
